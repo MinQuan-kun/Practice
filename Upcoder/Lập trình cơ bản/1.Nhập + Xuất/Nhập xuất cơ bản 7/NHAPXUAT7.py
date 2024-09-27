@@ -1,3 +1,2 @@
-import math
 a = float(input())
-print(round(a,3))
+print("{:.3f}".format(a),end='')
