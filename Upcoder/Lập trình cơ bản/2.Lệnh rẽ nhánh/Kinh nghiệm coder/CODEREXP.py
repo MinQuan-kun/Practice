@@ -1,0 +1,29 @@
+Basic, Medium, Extra, Hard = map(int, input().split());
+Point = Basic * 10 + Medium * 20 + Extra * 30 + Hard * 40;
+print(Point)
+if (Point >= 7000):
+    print("Coder Giao Su", end = '')
+elif (Point >= 5500):
+    print("Coder Tien Si", end = '')
+elif (Point >= 4200):
+    print("Coder Thac Si", end = '')
+elif (Point >= 3500):
+    print("Coder Dai Hoc", end = '')
+elif (Point >= 2500):
+    print("Coder Cao Dang", end = '')
+elif (Point >= 2000):
+    print("Coder Trung Cap", end = '')
+elif (Point >= 1500):
+    print("Coder THPT", end = '')
+elif (Point >= 1000):
+    print("Coder THCS", end = '')
+elif (Point >= 500):
+    print("Coder Tieu Hoc", end = '')
+elif (Point >= 100):
+    print("Coder Lop La", end = '')
+elif (Point >= 50):
+    print("Coder Lop Choi", end = '')
+elif (Point >= 1):
+    print("Coder Lop Mam", end = '')
+else:
+    print("Coder So Sinh", end = '')
