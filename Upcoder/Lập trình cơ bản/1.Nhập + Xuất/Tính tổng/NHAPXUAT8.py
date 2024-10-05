@@ -1,0 +1,5 @@
+a, b = map(float , input().split())
+c, d = map(float , input().split())
+e, f = map(float , input().split())
+tong = (a+b+c)/(d+e+f)
+print(tong)
