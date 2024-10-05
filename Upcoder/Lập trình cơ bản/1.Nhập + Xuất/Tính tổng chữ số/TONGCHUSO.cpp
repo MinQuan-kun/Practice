@@ -11,4 +11,5 @@ int main()
         n/=10;
     }
     cout << tong;
+    return 0;
 }

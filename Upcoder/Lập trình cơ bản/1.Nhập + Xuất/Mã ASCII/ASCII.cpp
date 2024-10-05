@@ -5,4 +5,5 @@ int main()
     char kt;
     cin >> kt;
     cout << (int)kt;
+    return 0;
 }
