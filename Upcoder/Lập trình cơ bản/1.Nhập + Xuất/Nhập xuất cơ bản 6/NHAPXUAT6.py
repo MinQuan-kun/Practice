@@ -1,0 +1,5 @@
+a = input()
+b = input()
+num1 = ord(a)
+num2 = ord(b)
+print(num1 + num2)
