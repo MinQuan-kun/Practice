@@ -1,29 +1,40 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-// Hàm kiểm tra số hoàn hảo
-bool SHT(int x) {
-    int tong = 0;
-    for (int i = 1; i <= x / 2; i++) // Chạy đến x / 2
-        if (x % i == 0)
-            tong += i;
-    return tong == x; // Trả về true nếu là số hoàn hảo
+bool PerfectNumber(long long num) {
+    if (num < 2) return false;
+
+    long long sum = 0;
+    for (long long i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+
+    return sum == num;
+}
+
+int FindLast(long long array[], int n) {
+    int lastIndex = -1;
+    for (int i = 0; i < n; i++) {
+        if (PerfectNumber(array[i])) {
+            lastIndex = i;
+        }
+    }
+    return lastIndex;
 }
 
 int main() {
     int n;
-    cin >> n; 
-    int arr[n]; 
-    int temp = -1; 
+    cin >> n;
 
+    long long array[n];
     for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-        if (SHT(arr[i])) 
-            temp = i; 
+        cin >> array[i];
     }
-    if (temp == -1)
-        cout << -1; 
-    else
-        cout << temp;
+
+    int result = FindLast(array, n);
+    cout << result << endl;
+
     return 0;
 }
