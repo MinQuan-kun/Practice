@@ -1,3 +1,4 @@
+//Code này chỉ đc 3.75 Điểm 
 using System;
 namespace Xaulonhon
 {
@@ -8,11 +9,11 @@ namespace Xaulonhon
             string A = Console.ReadLine();
             string B = Console.ReadLine();
             if (string.Compare(A, B) > 0)
-                Console.WriteLine(A);
+                Console.Write(A);
             else if (string.Compare(A, B) < 0)
-                Console.WriteLine(B);
+                Console.Write(B);
             else
-                Console.WriteLine("Hai xau bang nhau");
+                Console.Write("Hai xau bang nhau");
         }
     }
 }

@@ -1,8 +1,8 @@
 A = input()
 B = input()
 if A > B:
-    print(A)
+    print(A, end="")
 elif A < B:
-    print(B)
+    print(B, end="")
 else:
-    print("Hai xau bang nhau")
+    print("Hai xau bang nhau", end="")
