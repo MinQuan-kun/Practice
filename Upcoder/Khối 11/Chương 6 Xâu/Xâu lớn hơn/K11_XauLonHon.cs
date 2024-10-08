@@ -5,13 +5,12 @@ namespace Xaulonhon
     {
         static void Main(string[]args)
         {
-            string a = Console.ReadLine();
-            string b = Console.ReadLine();
-
-            if (string.Compare(a, b) > 0)
-                Console.WriteLine(a);
-            else if (string.Compare(b, a) > 0)
-                Console.WriteLine(b);
+            string A = Console.ReadLine();
+            string B = Console.ReadLine();
+            if (string.Compare(A, B) > 0)
+                Console.WriteLine(A);
+            else if (string.Compare(A, B) < 0)
+                Console.WriteLine(B);
             else
                 Console.WriteLine("Hai xau bang nhau");
         }

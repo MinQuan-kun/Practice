@@ -1,8 +1,8 @@
-a = input()
-b = input()
-if a > b:
-    print(a)
-elif b > a:
-    print(b)
+A = input()
+B = input()
+if A > B:
+    print(A)
+elif A < B:
+    print(B)
 else:
     print("Hai xau bang nhau")
