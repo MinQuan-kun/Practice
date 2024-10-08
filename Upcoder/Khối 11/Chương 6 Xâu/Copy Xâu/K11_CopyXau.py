@@ -1,4 +1,3 @@
-#code này chỉ có Điểm 3.75
 a = input()
 n, m = map(int, input().split())
 if n < 0 or m > len(a) or m < 0 or m >= len(a):
