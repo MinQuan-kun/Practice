@@ -8,11 +8,11 @@ namespace Xaudaihon
             string a = Console.ReadLine();
             string b = Console.ReadLine();
             if (a.Length > b.Length)
-                Console.WriteLine(a);
+                Console.Write(a);
             else if (a.Length < b.Length)
-                Console.WriteLine(b);
+                Console.Write(b);
             else
-            Console.WriteLine("Hai xau dai bang nhau");
+            Console.Write("Hai xau dai bang nhau");
         }
     }
 }
