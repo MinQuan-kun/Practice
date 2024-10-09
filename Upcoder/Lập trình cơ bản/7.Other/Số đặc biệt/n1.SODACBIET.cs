@@ -31,7 +31,7 @@ namespace Sodacbiet
             return true;
         }
     
-        static void Main()
+        static void Main(string[]args)
         {
             // Đọc dữ liệu từ file
             string[] lines = File.ReadAllLines("dacbiet.inp");
