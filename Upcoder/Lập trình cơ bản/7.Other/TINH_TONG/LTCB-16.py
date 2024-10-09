@@ -9,4 +9,4 @@ def DequyX(x, n):
     return DequyX(x, n - 1) + (x ** n) / DequyS(n)
 
 x, n = map(int, input().split())
-print(DequyX(x, n))
+print(DequyX(x, n), end="")
