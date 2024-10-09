@@ -1,0 +1,5 @@
+print( "Cac truong hop sau se bi 0 diem toan bai thi:" ,end = "")
+print( "+ Copy bai cua nguoi khac." ,end = "")
+print( "+ Chia se bai cho nguoi khac." ,end = "")
+print( "+ Nhung bai giong nhau (du khong quen nhau)." ,end = "")
+print( "+ Moi truong hop gian lan khac.", end = "")
