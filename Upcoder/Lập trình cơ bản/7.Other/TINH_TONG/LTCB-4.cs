@@ -10,7 +10,7 @@ namespace Tinhtong
             return DequyS(n - 1) + (1.0 / (2 * n));
         }
 
-        static void Main()
+        static void Main(string[]args)
         {
             int n = int.Parse(Console.ReadLine());
             Console.Write("{0:F3}", DequyS(n)); 
