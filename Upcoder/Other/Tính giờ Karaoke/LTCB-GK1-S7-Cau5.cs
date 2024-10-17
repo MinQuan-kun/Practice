@@ -1,0 +1,1 @@
+// Y chang câu tính tiền + thêm điều kiện ngoại lệ
