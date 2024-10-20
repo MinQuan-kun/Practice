@@ -1,4 +1,4 @@
-Các bài tập hay, nội dung học tớ học trên kênh TITV
+Các bài tập hay nội dung học tớ học trên kênh TITV
 Link kênh:https://www.youtube.com/@TITVvn
 Link tải database: https://github.com/lenhattung/sqlserver
 Tải Northwind Database và sử dụng SQL server để thực hiện các truy vấn
@@ -75,3 +75,12 @@ FROM table_name
 Tính giá trị trung bình cho một cột
 Nếu tất cả các giá trị trong cột là NULL, kết quả cảu hàm AVG sẽ là NULL
 Nếu chỉ một và giá trị là NULL, AVG sẽ bỏ qua các giá trị NULL và tính trung bình cho các giá trị khác
+
+
+<-- ORDER BY -->
+SELECT colum1, colum2, ..
+FROM table_name
+ORDER BY colum1, colum2, ... ASC|DESC;
+
+ASC: sắp xếp tăng dần(mặc định nếu không ghi)
+DESC: sắp xết giảm dần
