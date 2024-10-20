@@ -13,6 +13,7 @@ FROM table_name;
 SELECT *
 FROM [Name Table];
 
+<-- Lấy ra các dữ liệu khác nhau của cột trong bảng -->
 Câu lệnh SELECT DISTINCT
 SELECT DISTINCt colum1, colum2,...
 FROM table_name;
