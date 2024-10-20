@@ -38,3 +38,17 @@ Giúp cho việc đọc và hiểu các câu lệnh SQL dễ dàng hơn
 <--ALÍA Tên bảng -->
 SELECT column_name(s)
 FROM table_name AS alias_name
+
+<--Tìm giá trị nhỏ nhất-->
+SELECT MIN(column_name)
+FROM table_name
+
+Tìm ra giá trị nhỏ nhất của một cột
+Có thể kết hợp với ALIAS để thay đổi tên cột
+
+<--Tìm giá trị lớn nhất -->
+SELECT MAX(column_name)
+FROM table_name
+
+Tìm ra giá trị lớn nhất của một cột.
+Có thể kết hợp với ALIAS để thay đổi tên cột.
