@@ -1,0 +1,4 @@
+-- Hãy liệt kê danh sách các sản phẩm và giá(UnitPrice)
+-- của từng sản phẩm sẽ được giảm đi 10%
+-- Cách 1: dùng phép nhân + phép chia
+-- Cách 2: chỉ được dùng phép nhân
