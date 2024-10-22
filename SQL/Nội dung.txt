@@ -35,7 +35,7 @@ FROM table_name
 
 Đặt tên thay thế cho các bảng
 Giúp cho việc đọc và hiểu các câu lệnh SQL dễ dàng hơn
-<--ALÍA Tên bảng -->
+<--ALIAS Tên bảng -->
 SELECT column_name(s)
 FROM table_name AS alias_name
 
