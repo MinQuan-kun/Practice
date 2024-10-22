@@ -134,6 +134,27 @@ SELECT colum1, colum2,..
 FROM table_name
 WHERE columN LIKE pattern;
 
-Có hai ký tuwjd đại diện thường được sử dụng cùng với LIKE:
+Có hai ký tự đại diện thường được sử dụng cùng với LIKE:
 Dấu phần trăm (%) đại diện cho không, một hoặc nhiều ký thực
 Dấu gạch dưới (_) đại diện cho một ký tự đơn
+
+<-- WILDCARD - Ký tự đại diện -->
+'%'
+sẽ tìm một hoặc nhiều các ký tự có xuất hiện phía sau a%
+Ví dụ a% sẽ được tìm ra ate, an , a, ..
+
+'_' 
+sẽ tìm ra một ký tự phía sau a_
+Ví dụ a_ sẽ được tìm ra ae, at, ...
+
+'[]' 
+sẽ tìm bất cứ ký tự có trong []
+Ví dụ [oa] sẽ được tìm ra trong hot, hat , hong, hoa,.. nhưng không tìm ra trong hit
+
+'^' 
+sẽ tìm các từ không chứa ký tự , ngược lại với Tìm
+Ví dụ [^oa] sẽ được tìm ra trong hit , hurt, .....
+
+'-'
+sẽ tìm các từ có trong khoảng kí tự a - z
+Ví dụ c[a-b] sẽ được tìm ra trong cat, cbt , ....
