@@ -11,7 +11,7 @@ FROM table_name;
 
 <-- Lấy ra tất cả dữ liệu của 1 bảng -->
 SELECT *
-FROM [Name Table];
+FROM table_name;
 
 <-- Lấy ra các dữ liệu khác nhau của cột trong bảng -->
 Câu lệnh SELECT DISTINCT
@@ -158,3 +158,18 @@ Ví dụ [^oa] sẽ được tìm ra trong hit , hurt, .....
 '-'
 sẽ tìm các từ có trong khoảng kí tự a - z
 Ví dụ c[a-b] sẽ được tìm ra trong cat, cbt , ....
+
+<-- IN -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN(value1, value2,...)
+
+Có ý nghĩa tương tự như OR
+Cho phép kiểm tra với nhiều giá trị cùng lúc
+
+<-- NOT IN -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name NOT IN(value1, value2,...)
+
+Giá trị của column khác với các giá trị đã trị định
