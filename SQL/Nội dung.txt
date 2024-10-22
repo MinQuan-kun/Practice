@@ -89,3 +89,8 @@ DESC: sắp xết giảm dần
 Cấu trúc chung
 SELECT colum1 [Phép toán] colum2,..
 FROM table_name
+
+<--Mệnh đề WHERE -->
+SELECT colum1, colum2
+FROM table_name
+WHERE condition
