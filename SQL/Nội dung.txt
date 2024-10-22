@@ -198,3 +198,22 @@ ORDER BY column_name(s)
 
 Dùng để nhóm các dòng dữ liệu có cùng giá trị
 Thường được dùng với các hàm COUNT(), MAX(), MIN(), SUM(), AVG()
+
+Các hàm về ngày - tháng - năm 
+<-- DAY(date | datetime)
+SELECT DATE('2023-08-25')
+--> 25
+
+Lấy dữ liệu ngày
+
+<-- MONTH(date | datetime)
+SELECT MONTH('2023-08-25')
+--> 08
+
+Lấy dữ liệu tháng
+
+<-- YEAR(date | datetime)
+SELECT YEAR('2023-08-25')
+--> 2023
+
+Lấy dữ liệu năm
