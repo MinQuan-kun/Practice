@@ -173,3 +173,18 @@ FROM table_name
 WHERE column_name NOT IN(value1, value2,...)
 
 Giá trị của column khác với các giá trị đã trị định
+
+<-- IS NULL -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IS NULL;
+
+Giá trị của column bị NULL
+
+
+<-- IS NOT NULL -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+Giá trị của column khác NULL
