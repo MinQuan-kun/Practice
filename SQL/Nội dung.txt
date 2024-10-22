@@ -119,3 +119,12 @@ Hiện thị một bản ghi nếu có ít nhất 1 điều kiện được phâ
 SELECT colum1, colum2,..
 FROM table_name
 WHERE NOT condition1;
+
+<-- TOÁN TỬ BETWEEN -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+Toán tử BETWEEN tử chọn các giá trị trong một phạm vi 
+nhất định.Các giá trị có thể là số, văn bản hoặc ngày tháng.
+Toán tử BETWEEN bao gồm: giá trị bắt đầu và kết thúc.
