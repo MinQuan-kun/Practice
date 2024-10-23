@@ -229,3 +229,13 @@ ORDER BY column_name(s);
 Lọc dữ liệu sau GROUP BY
 Khác với WHERE Khi lọc điều kiện không sử dụng được các hàm như SUM(),COUNT()
 Thì HAVING sinh ra để xử lý vấn đề đó
+
+<-- UNION -->
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2
+
+Được sử dụng để kết hợp tập kết quả của 2 hoặc nhiều câu lệnh
+Mỗi câu lệnh bên trong phải có cùng só lượng cột
+Các cột cũng phải có kiểu dữ liệu tương tự
+Các cột trong mỗi câu lệnh cũng phải theo cùng thứ tự
