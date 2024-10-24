@@ -244,12 +244,25 @@ Các cột trong mỗi câu lệnh cũng phải theo cùng thứ tự
 CHO PHÉP CÁC GIÁ TRỊ BỊ LẶP LẠI
 
 <-- Các câu lệnh JOIN -->
+
+<-- INNER JOIN -->
 INTER JOIN (Hoặc JOIN)
 Trả về tất cả các hàng khi có ít nhất một giá trị ở cả 2 bảng
 
-<-- INNER JOIN -->
 SELECT column_name(s)
 FROM table1
 INNER JOIN table2
 ON table1.column_name = table_name.column_name
 Trả về tất cả các hàng khi có ít nhất một giá trị ở cả hai bảng
+
+<--LEFT JOIN -->
+LEFT OUTER JOIN (Hoặc LEFT JOIN)
+Trả lại tất cả các dòng từ bảng bên trái, và các dòng đúng
+với điều kiện từ bảng bên phải
+
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table_name.column_name
+Trả lại tất cả các dòng từ bảng bên trái, và các dòng đúng với điều kiện
+từ bảng bên phải
