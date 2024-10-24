@@ -1,0 +1,299 @@
+Các bài tập hay nội dung học tớ học trên kênh TITV
+Link kênh:https://www.youtube.com/@TITVvn
+Link tải database: https://github.com/lenhattung/sqlserver
+Tải Northwind Database và sử dụng SQL server để thực hiện các truy vấn
+
+<--Phần nội dung học-->
+
+Câu lệnh SELECT
+SELECT colum1, colum2,...
+FROM table_name;
+
+<-- Lấy ra tất cả dữ liệu của 1 bảng -->
+SELECT *
+FROM table_name;
+
+<-- Lấy ra các dữ liệu khác nhau của cột trong bảng -->
+Câu lệnh SELECT DISTINCT
+SELECT DISTINCt colum1, colum2,...
+FROM table_name;
+
+<-- Lấy ra giới hạn số lượng dòng (hoặc %) được trả về khi được gọi lệnh SELECT
+Câu lệnh SELECT TOP number | percent column_name(s)
+FROM table_name
+WHERE condition;
+
+<-- Lấy nội dung riêng biệt nhưng chỉ lấy số lượng có hạn -->
+SELECT DISTINCT TOP n colum2
+FROM table_name
+
+Đặt tên thay thế cho các cột
+Giúp cho việc đọc và hiểu câu lệnh dễ dàng hơn
+<--ALIAS các cột -->
+SELECT column_name AS alias_name
+FROM table_name
+
+Đặt tên thay thế cho các bảng
+Giúp cho việc đọc và hiểu các câu lệnh SQL dễ dàng hơn
+<--ALIAS Tên bảng -->
+SELECT column_name(s)
+FROM table_name AS alias_name
+
+<--Tìm giá trị nhỏ nhất-->
+SELECT MIN(column_name)
+FROM table_name
+
+Tìm ra giá trị nhỏ nhất của một cột
+Có thể kết hợp với ALIAS để thay đổi tên cột
+
+<--Tìm giá trị lớn nhất -->
+SELECT MAX(column_name)
+FROM table_name
+
+Tìm ra giá trị lớn nhất của một cột.
+Có thể kết hợp với ALIAS để thay đổi tên cột.
+
+<-- Đếm số lương - COUNT() -->
+SELECT COUNT(column_name)
+FROM table_name
+
+Đếm số lượng dữ liệu (khác NULL) trong cột 
+Sử dụng COUNT(*) khi muốn đếm số lượng bản ghi
+
+
+<-- Đếm số lương - SUM() -->
+SELECT SUM(column_name)
+FROM table_name
+
+Tính tổng giá trị của một cột
+Nếu bất kỳ giá trị trong cột là NULL, Kết quả của hàm SUM sẽ là NULL
+
+<-- Đếm số lương -AVG() -->
+SELECT AVG(column_name)
+FROM table_name
+
+Tính giá trị trung bình cho một cột
+Nếu tất cả các giá trị trong cột là NULL, kết quả cảu hàm AVG sẽ là NULL
+Nếu chỉ một và giá trị là NULL, AVG sẽ bỏ qua các giá trị NULL và tính trung bình cho các giá trị khác
+
+
+<-- ORDER BY -->
+SELECT colum1, colum2, ..
+FROM table_name
+ORDER BY colum1, colum2, ... ASC|DESC;
+
+ASC: sắp xếp tăng dần(mặc định nếu không ghi)
+DESC: sắp xết giảm dần
+
+<-- Các phép toán -->
+Cấu trúc chung
+SELECT colum1 [Phép toán] colum2,..
+FROM table_name
+
+<--Mệnh đề WHERE -->
+SELECT colum1, colum2
+FROM table_name
+WHERE condition
+
+Nếu tìm kiếm từ khóa có chữ thì
+WHERE colum1 = 'name'
+
+Trường hợp có dấu thì
+WHERE colum1 = N'name'
+
+<-- AND - VÀ -->
+SELECT colum1, colum2,...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3
+
+Hiện thị một bản ghi nếu tất cả các điều kiện được phân tách bằng AND đều có giá trị TRUE
+
+<-- OR - HOẶC -->
+SELECT colum1, colum2,..
+FROM table_name
+WHERE condition1 OR condition2 OR condition3
+
+Hiện thị một bản ghi nếu có ít nhất 1 điều kiện được phân tách bằng OR có giá trị TRUE
+
+<-- NOT - PHỦ ĐỊNH -->
+SELECT colum1, colum2,..
+FROM table_name
+WHERE NOT condition1;
+
+<-- TOÁN TỬ BETWEEN -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+Toán tử BETWEEN tử chọn các giá trị trong một phạm vi 
+nhất định.Các giá trị có thể là số, văn bản hoặc ngày tháng.
+Toán tử BETWEEN bao gồm: giá trị bắt đầu và kết thúc.
+
+<-- TOÁN TỬ LIKE -->
+SELECT colum1, colum2,..
+FROM table_name
+WHERE columN LIKE pattern;
+
+Có hai ký tự đại diện thường được sử dụng cùng với LIKE:
+Dấu phần trăm (%) đại diện cho không, một hoặc nhiều ký thực
+Dấu gạch dưới (_) đại diện cho một ký tự đơn
+
+<-- WILDCARD - Ký tự đại diện -->
+'%'
+sẽ tìm một hoặc nhiều các ký tự có xuất hiện phía sau a%
+Ví dụ a% sẽ được tìm ra ate, an , a, ..
+
+'_' 
+sẽ tìm ra một ký tự phía sau a_
+Ví dụ a_ sẽ được tìm ra ae, at, ...
+
+'[]' 
+sẽ tìm bất cứ ký tự có trong []
+Ví dụ [oa] sẽ được tìm ra trong hot, hat , hong, hoa,.. nhưng không tìm ra trong hit
+
+'^' 
+sẽ tìm các từ không chứa ký tự , ngược lại với Tìm
+Ví dụ [^oa] sẽ được tìm ra trong hit , hurt, .....
+
+'-'
+sẽ tìm các từ có trong khoảng kí tự a - z
+Ví dụ c[a-b] sẽ được tìm ra trong cat, cbt , ....
+
+<-- IN -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN(value1, value2,...)
+
+Có ý nghĩa tương tự như OR
+Cho phép kiểm tra với nhiều giá trị cùng lúc
+
+<-- NOT IN -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name NOT IN(value1, value2,...)
+
+Giá trị của column khác với các giá trị đã trị định
+
+<-- IS NULL -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IS NULL;
+
+Giá trị của column bị NULL
+
+
+<-- IS NOT NULL -->
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+Giá trị của column khác NULL
+
+<-- GROUP BY -- >
+SELECT column_name
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s)
+
+Dùng để nhóm các dòng dữ liệu có cùng giá trị
+Thường được dùng với các hàm COUNT(), MAX(), MIN(), SUM(), AVG()
+
+Các hàm về ngày - tháng - năm 
+<-- DAY(date | datetime)
+SELECT DATE('2023-08-25')
+--> 25
+
+Lấy dữ liệu ngày
+
+<-- MONTH(date | datetime)
+SELECT MONTH('2023-08-25')
+--> 08
+
+Lấy dữ liệu tháng
+
+<-- YEAR(date | datetime)
+SELECT YEAR('2023-08-25')
+--> 2023
+
+Lấy dữ liệu năm
+
+<-- HAVING -->
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+
+Lọc dữ liệu sau GROUP BY
+Khác với WHERE Khi lọc điều kiện không sử dụng được các hàm như SUM(),COUNT()
+Thì HAVING sinh ra để xử lý vấn đề đó
+
+<-- UNION -->
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2
+
+Được sử dụng để kết hợp tập kết quả của 2 hoặc nhiều câu lệnh
+Mỗi câu lệnh bên trong phải có cùng só lượng cột
+Các cột cũng phải có kiểu dữ liệu tương tự
+Các cột trong mỗi câu lệnh cũng phải theo cùng thứ tự
+
+<-- UNION ALL -->
+CHO PHÉP CÁC GIÁ TRỊ BỊ LẶP LẠI
+
+<-- Các câu lệnh JOIN -->
+
+<-- INNER JOIN -->
+INTER JOIN (Hoặc JOIN)
+Trả về tất cả các hàng khi có ít nhất một giá trị ở cả 2 bảng
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table_name.column_name
+Trả về tất cả các hàng khi có ít nhất một giá trị ở cả hai bảng
+
+<--LEFT JOIN -->
+LEFT OUTER JOIN (Hoặc LEFT JOIN)
+Trả lại tất cả các dòng từ bảng bên trái, và các dòng đúng
+với điều kiện từ bảng bên phải
+
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table_name.column_name
+Trả lại tất cả các dòng từ bảng bên trái, và các dòng đúng với điều kiện
+từ bảng bên phải
+
+<--RIGHT JOIN -->
+RIGHT OUTER JOIN (Hoặc RIGHT JOIN)
+Trả lại tất cả các dòng từ bảng bên phải, và các dòng đúng
+với điều kiện từ bảng bên trái
+
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table_name.column_name
+Trả lại tất cả các dòng từ bảng bên phải, và các dòng đúng với điều kiện
+từ bảng bên trái
+
+<--FULL JOIN -->
+FULL OUTER JOIN (Hoặc FULL JOIN)
+Trả về tất cả các dòng đúng với 1 trong các bảng
+
+SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table_name.column_name
+Trả về tất cả các dòng đúng với 1 trong các bảng
+
+Giới thiệu về SUB QUERY
+Subquery (câu truy vấn con) trong SQL là một truy vấn
+SELECT được viết bên trong một truy vấn SELECT,
+UPDATE, INSERT, hoặc DELETE khác.
+
+Subquery hoạt động như một bảng ảo tạm thời, nó được Sử
+dụng để trích xuất thông tin từ các bảng hoặc tập dữ liệu khác
+trong cùng một câu truy vấn.
