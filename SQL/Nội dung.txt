@@ -266,3 +266,15 @@ LEFT JOIN table2
 ON table1.column_name = table_name.column_name
 Trả lại tất cả các dòng từ bảng bên trái, và các dòng đúng với điều kiện
 từ bảng bên phải
+
+<--RIGHT JOIN -->
+RIGHT OUTER JOIN (Hoặc RIGHT JOIN)
+Trả lại tất cả các dòng từ bảng bên phải, và các dòng đúng
+với điều kiện từ bảng bên trái
+
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table_name.column_name
+Trả lại tất cả các dòng từ bảng bên phải, và các dòng đúng với điều kiện
+từ bảng bên trái
