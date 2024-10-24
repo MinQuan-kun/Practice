@@ -243,3 +243,13 @@ Các cột trong mỗi câu lệnh cũng phải theo cùng thứ tự
 <-- UNION ALL -->
 CHO PHÉP CÁC GIÁ TRỊ BỊ LẶP LẠI
 
+<-- Các câu lệnh JOIN -->
+INTER JOIN (Hoặc JOIN)
+Trả về tất cả các hàng khi có ít nhất một giá trị ở cả 2 bảng
+
+<-- INNER JOIN -->
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table_name.column_name
+Trả về tất cả các hàng khi có ít nhất một giá trị ở cả hai bảng
