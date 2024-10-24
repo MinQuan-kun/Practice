@@ -239,3 +239,7 @@ SELECT column_name(s) FROM table2
 Mỗi câu lệnh bên trong phải có cùng só lượng cột
 Các cột cũng phải có kiểu dữ liệu tương tự
 Các cột trong mỗi câu lệnh cũng phải theo cùng thứ tự
+
+<-- UNION ALL -->
+CHO PHÉP CÁC GIÁ TRỊ BỊ LẶP LẠI
+
