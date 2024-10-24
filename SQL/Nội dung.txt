@@ -278,3 +278,13 @@ RIGHT JOIN table2
 ON table1.column_name = table_name.column_name
 Trả lại tất cả các dòng từ bảng bên phải, và các dòng đúng với điều kiện
 từ bảng bên trái
+
+<--FULL JOIN -->
+FULL OUTER JOIN (Hoặc FULL JOIN)
+Trả về tất cả các dòng đúng với 1 trong các bảng
+
+SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table_name.column_name
+Trả về tất cả các dòng đúng với 1 trong các bảng
